@@ -6,3 +6,6 @@
 - Сніховський Владислав
 - Шолом Дмитро
 - Можаровський Андрій
+
+Засіб для моделювання за посиланням:
+https://drive.google.com/file/d/0B_dTdWhIHE8ARkdfWmFaTGJIRjQ/view?usp=sharing
