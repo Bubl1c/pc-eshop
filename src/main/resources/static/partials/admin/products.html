@@ -1,0 +1,7 @@
+<button class="btn btn-success" ui-sref="admin.add">Add new</button>
+<div ng-repeat="product in Admin.products">
+    <product-layout data="product"></product-layout>
+    <br/>
+    <button ng-click="Admin.removeProduct(product.id)">Remove</button>
+    <hr/>
+</div>

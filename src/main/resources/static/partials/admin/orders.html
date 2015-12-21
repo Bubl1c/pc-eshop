@@ -1,0 +1,7 @@
+<button ui-sref="admin">Back</button>
+<div ng-repeat="order in Admin.orders">
+    <order-in-list-layout data="order"></order-in-list-layout>
+    <hr/>
+    <button ng-click="Admin.approve(order)">Approve</button>
+    <button ng-click="Admin.decline(order)">Decline</button>
+</div>

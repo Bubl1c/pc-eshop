@@ -1,0 +1,4 @@
+<div ng-include src="'static/partials/login/header.html'"></div>
+<button ui-sref="admin.products" ng-click="Admin.fetchProducts()">Products</button>
+<button ui-sref="admin.orders" ng-click="Admin.fetchPendingOrders()">Pending orders</button>
+<div ui-view></div>

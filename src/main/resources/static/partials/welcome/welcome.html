@@ -1,0 +1,21 @@
+<div class="full-width">
+    <div ng-include src="'static/partials/login/header.html'"></div>
+    <div ng-controller="cartController as Cart">
+        <div ng-show="Cart.products.length > 0" class="cart">
+            <H4>Cart:</H4>
+            <div ng-repeat="product in Cart.products" class="cart-entry">
+                <cart-entry-layout data="product"></cart-entry-layout>
+                <button ng-click="Cart.removeProduct(product)">Remove</button>
+            </div>
+            <span class="bold">Total: {{Cart.summary.total.toFixed(2)}}$</span>
+            <button ng-click="Cart.submitOrder(User.info)">Submit Order</button>
+        </div>
+    </div>
+    <hr/>
+    <div ng-repeat="product in welcome.products">
+        <product-layout data="product"></product-layout>
+        <br/>
+        <button ng-click="welcome.addToCart(product)">To cart</button>
+        <hr/>
+    </div>
+</div>

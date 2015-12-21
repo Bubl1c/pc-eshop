@@ -1,0 +1,17 @@
+.full-width {
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cart {
+    background: #ADB8D2;
+    padding: 5px;
+}
+
+.cart-entry {
+    background: #bdbdbd;
+    margin: 5px;
+}
