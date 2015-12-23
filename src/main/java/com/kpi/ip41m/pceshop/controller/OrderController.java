@@ -10,11 +10,13 @@ import com.kpi.ip41m.pceshop.entity.product.Product;
 import com.kpi.ip41m.pceshop.repository.CustomerRepository;
 import com.kpi.ip41m.pceshop.repository.OrderRepository;
 import com.kpi.ip41m.pceshop.repository.ProductRepository;
+import com.sun.istack.internal.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by Andrii on 16.12.2015.
@@ -78,7 +80,8 @@ public class OrderController {
 
     private List<OrderRow> prepareRows(OrderDto dto) {
         List<OrderRow> orderRows = new ArrayList<>();
-        for(OrderRowDto orderRowDto : dto.getRows()) {
+        List<OrderRowDto> orderRowDtos = Optional.ofNullable(dto.getRows()).orElseGet(ArrayList::new);
+        for(OrderRowDto orderRowDto : orderRowDtos) {
             Product product = productRepository.findOne(orderRowDto.getProductId());
             OrderRow row = new OrderRow();
             row.setProduct(product);

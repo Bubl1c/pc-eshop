@@ -18,6 +18,9 @@ public class OrderRow {
     @ManyToOne(fetch = FetchType.EAGER)
     private Product product;
 
+    @ManyToOne
+    private Order order;
+
     public Long getId() {
         return id;
     }

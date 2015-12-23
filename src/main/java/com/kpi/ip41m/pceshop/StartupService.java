@@ -37,7 +37,7 @@ public class StartupService {
     CustomerRepository customerRepository;
 
     public void initializeDatabase() {
-        createDefaultUserAccounts();
+//        createDefaultUserAccounts();
     }
 
     @Transactional
