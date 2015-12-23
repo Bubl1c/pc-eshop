@@ -1,0 +1,5 @@
+<dataset>
+    <product id="1" name="Apple - MacBook Pro with Retina display (Latest Model)" description="MacBook Pro with Retina display - 13.3' Display - 8GB Memory - 128GB Flash Storage, Silver" price="1299.99" />
+    <product id="2" name="Dell Inspiron 13 7000 Series 2-in-1 Special Edition" description="The new Inspiron 13 7000 Series 2-in-1 Special Edition combines tablet mobility, laptop performance and premium design for work or play anywhere." price="749.99" />
+    <product id="3" name="ASUS ZENBOOK UX301LA" description="Мощный процессор Intel® (вплоть до Intel® Core™ i7-4558U)" price="1699.99" />
+</dataset>

@@ -1,0 +1,9 @@
+<dataset>
+    <address id="9" country="Ukraine" city="Kyiv" street="Yangelia" building_number="22/a" apartment="402" zip="37700"/>
+    <!-- order 1-->
+    <payment id="1" paid="2014-10-17 15:03:30" details="Payed successfully" total_sum="99.99"/>
+    <shipping id="1" price="9.99" type="COURIER" ship_to_id="9" />
+    <customer_order id="1" ordered="2014-10-17 14:03:30" shipped="2014-10-18 14:03:30" customer_id="8" payment_id="1" shipping_id="1"/>
+    <order_row id="1" quantity="3" product_id="2" order_id="1" />
+    <order_row id="2" quantity="1" product_id="1" order_id="1" />
+</dataset>

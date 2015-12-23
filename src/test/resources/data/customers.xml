@@ -1,0 +1,5 @@
+<dataset>
+    <user_account id="8" username="test" password="test" email="test@test.com" phone="+380668356843" account_type="CUSTOMER" />
+    <address id="8" country="Ukraine" city="Kyiv" street="Yangelia" building_number="22/a" apartment="402" zip="37700"/>
+    <customer id="8" account_id="8" address_id="8" />
+</dataset>

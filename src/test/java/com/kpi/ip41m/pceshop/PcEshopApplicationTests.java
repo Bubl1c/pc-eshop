@@ -2,11 +2,16 @@ package com.kpi.ip41m.pceshop;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.TestExecutionListeners;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
+import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
+import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
+import org.springframework.test.context.web.ServletTestExecutionListener;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -23,6 +28,11 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = PcEshopApplication.class)
 @WebAppConfiguration
+@TestExecutionListeners(listeners={ServletTestExecutionListener.class,
+		DependencyInjectionTestExecutionListener.class,
+		DirtiesContextTestExecutionListener.class,
+		TransactionalTestExecutionListener.class,
+		DbUnitTestExecutionListener.class})
 public abstract class PcEshopApplicationTests {
 
 	@Autowired
@@ -31,7 +41,7 @@ public abstract class PcEshopApplicationTests {
 	protected MockMvc mockMvc;
 
 	@Before
-	public void before() {
+	public void before() throws Exception {
 		this.mockMvc = webAppContextSetup(this.wac).build();
 	}
 
