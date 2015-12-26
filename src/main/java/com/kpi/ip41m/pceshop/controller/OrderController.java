@@ -60,6 +60,11 @@ public class OrderController {
         return order.getId();
     }
 
+    @RequestMapping(value = "/{id}/remove", method = RequestMethod.GET)
+    public void delete(@PathVariable("id") Long id){
+        orderRepository.delete(id);
+    }
+
     private Shipping prepareShipping(OrderDto orderDto) {
         Shipping shipping = new Shipping();
         ShippingDto dto = orderDto.getShipping();

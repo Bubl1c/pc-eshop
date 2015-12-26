@@ -8,6 +8,7 @@ import com.kpi.ip41m.pceshop.dto.OrderDto;
 import com.kpi.ip41m.pceshop.dto.OrderRowDto;
 import com.kpi.ip41m.pceshop.dto.ShippingDto;
 import com.kpi.ip41m.pceshop.entity.order.Payment;
+import com.kpi.ip41m.pceshop.entity.product.Product;
 import org.junit.Test;
 
 
@@ -43,6 +44,11 @@ public class OrderEndpointIT extends PcEshopApplicationTests{
 
     }
 
+    @Test
+     public void shouldSaveProduct() throws Exception {
+        get(ordersEndpointURL + "/1/remove").andExpect(status().isOk());
+    }
+
     private OrderDto newOrder(){
         ShippingDto shippingDto = new ShippingDto();
         shippingDto.setCountry("USA");
@@ -62,5 +68,4 @@ public class OrderEndpointIT extends PcEshopApplicationTests{
 
         return orderDto;
     }
-
 }
